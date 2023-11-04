@@ -1,0 +1,72 @@
+
+.promociones_grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.propmociones_heading{
+    font-size: 2.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.promocion{
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px -4px black;
+}
+.promocion_nombre{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1rem 0;
+    text-align: center;
+}
+.promocion_imagen{
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+.promocion img{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.precio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 0 1rem;
+    font-size: 1.7em;
+    gap: 1rem;
+}
+.precio_actual{
+    font-weight: bold;
+}
+.precio_antiguo{
+    font-weight: bold;
+    color: #ec0b0b;
+    text-decoration: line-through;
+}
+.boton{
+    padding: 1rem;
+}
+.btn{
+    padding: 1rem 2rem;
+    border: none;
+}
+.boton_ver{
+    border-radius: 2rem;
+    width: 100%;
+    background-color: #193694;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+@media ( min-width: 768px ) {
+    .promociones_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
