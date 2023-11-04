@@ -43,6 +43,8 @@ export const Header = () => {
                         <button className='header_navbar_nav_ul_cart'> <img src="./src/assets/shopping-cart.png" alt="" /> </button>
                     </ul>
                 </nav>
+
+                
             </div>
 
         </header>
