@@ -13,12 +13,18 @@ export const Header = () => {
 
             <div className='header_banner_color'>
                 <div className='header_banner'>
-                    <a href="" > <img src="" alt="" /> </a>
+
+                    <div className='header_banner_logo'>
+                        <a href=""><img src="./src/assets/bembos_logo.webp" alt="" /> </a>
+                    </div>
+
                     <div className='header_banner_sub'>
                         <p className='header_banner_sub_delivery'>
-                            <span>Delivery</span> LIMA <br />
-                            014191919</p>
-                        <button className='header_banner_sub_login'>Ingresar o crear tu cuenta</button>
+                            <img src="./src/assets/phone-volume-solid.svg" alt="" /><span> Delivery</span> LIMA <br />
+                            014191919
+                        </p>
+                        <button className='header_banner_sub_login'> <img src="./src/assets/usuario.png" alt="" /> Ingresar o crear tu cuenta
+                        </button>
                     </div>
 
                 </div>
@@ -34,7 +40,7 @@ export const Header = () => {
                         <li className='header_navbar_nav_ul_item'><a href="">ZONAS DE REPARTO</a></li>
                         <li className='header_navbar_nav_ul_item'><a href="">NOSOTROS</a></li>
                         <button className='header_navbar_nav_ul_order'>Pide en tiendas <span>SIN <br /> COLAS</span></button>
-                        <button className='header_navbar_nav_ul_cart'>carrito</button>
+                        <button className='header_navbar_nav_ul_cart'> <img src="./src/assets/shopping-cart.png" alt="" /> </button>
                     </ul>
                 </nav>
             </div>

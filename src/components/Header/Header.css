@@ -33,7 +33,7 @@ button {
 }
 
 .header_banner_color {
-    background-color: #173083;
+    background-color: #011689;
 }
 
 .header_banner {
@@ -44,15 +44,24 @@ button {
     margin-right: auto;
 }
 
+.header_banner_logo a img {
+    width: 150px;
+}
+
 .header_banner_sub {
     display: flex;
     padding: 15px;
+    
 }
 
 .header_banner_sub_delivery {
     color: white;
     margin-left: 20px;
+}
 
+.header_banner_sub_delivery img {
+    filter: invert(1);
+    height: 16px;
 }
 
 .header_banner_sub_delivery span {
@@ -64,6 +73,12 @@ button {
     background-color: transparent;
     color: white;
     margin-left: 20px;
+    
+}
+
+.header_banner_sub_login img {
+    height: 35px;
+    filter: invert(1);
 }
 
 .header_navbar {
@@ -75,7 +90,7 @@ button {
     margin-right: auto;
 }
 
-.header_navbar_nav{
+.header_navbar_nav {
     width: 100%;
 }
 
@@ -84,13 +99,13 @@ button {
     justify-content: space-between;
     list-style: none;
     color: #173083;
-    }
+}
 
 .header_navbar_nav_ul_item a {
     text-decoration: none;
     transition: border-bottom 0.3s, color 0.3s;
     font-size: 20px;
-    
+
 }
 
 .header_navbar_nav_ul_item a:hover {
@@ -101,7 +116,7 @@ button {
     border: none;
     background-color: #FBB905;
     border-radius: 35px;
-    padding: 5px 30px 5px 30px
+    padding: 5px 30px 5px 30px;
 }
 
 .header_navbar_nav_ul_order span {
@@ -112,4 +127,10 @@ button {
 .header_navbar_nav_ul_cart {
     border: none;
     background-color: #FBB905;
+    border-radius: 35px;
+    padding: 5px 25px 5px 25px;
+}
+
+.header_navbar_nav_ul_cart img {
+    height: 25px;
 }
