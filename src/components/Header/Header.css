@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Oswald', sans-serif;
-}
-
-button {
-    cursor: pointer;
-}
 
 .header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -19,29 +9,34 @@ button {
     background-color: #000000;
     color: #FFFFFF;
     display: flex;
-    align-items: center;
     justify-content: center;
-    line-height: 18px;
-    padding: 5px 0;
-    font-size: 16px;
+    align-items: center;
+    gap: 10px;
 }
 
 .header_horarios p {
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 5px 20px ;
+    font-size: 12px;
+}
+.line{
+    width: 1px;
+    height: 34px;
+    background-color: #fff;
 }
 
 .header_banner_color {
-    background-color: #011689;
+    display: none;
+    background-color: var(--color-primario);
 }
-
+@media ( min-width: 1024px ){
+    .header_banner_color{
+        display: block;
+    }
+}
 .header_banner {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .header_banner_logo a img {
@@ -94,6 +89,18 @@ button {
     margin-right: auto;
 }
 
+.header_navbar_list{
+    display: none;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10px 20px 0;
+    justify-content: space-between;
+}
+@media ( min-width: 1024px  ) {
+    .header_navbar_list{
+        display: flex;
+    }
+}
 .header_navbar_nav {
     width: 100%;
 }
@@ -101,6 +108,7 @@ button {
 .header_navbar_nav_ul {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     list-style: none;
     color: #173083;
     align-items: center;
@@ -108,35 +116,101 @@ button {
 
 .header_navbar_nav_ul_item a {
     text-decoration: none;
-    transition: border-bottom 0.3s, color 0.3s;
+    transition: border-bottom .2s, color .2s;
     font-size: 20px;
-
+    color: var(--color-primario);
 }
 
 .header_navbar_nav_ul_item a:hover {
     border-bottom: 3px solid #E10B19;
 }
 
+.header_navbar_actions_button {
+    width: 65%
+}
 .header_navbar_nav_ul_order {
-    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
     background-color: #FBB905;
-    border-radius: 35px;
-    padding: 5px 30px 5px 30px;
-    font-size: 16px;
+    border-radius: 25px;
+    padding: 7px 20px;
+    width: 100%;
+    min-width: 100%;
+    outline: 0;
+    color: #373d42;
+}
+@media ( min-width: 1024px  ) {
+    .header_navbar_nav_ul_order{
+        display: flex;
+    }
+}
+.header_navbar_nav_ul_order img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+.header_navbar_text{
+    color: var(--color-primario);
+    font-size: 12px;
+    font-weight: 100;
+    width: 122.75px;
 }
 
-.header_navbar_nav_ul_order span {
+.header_navbar_text strong{
     color: #E10B19;
-    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header_navbar_actions{
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .header_navbar_nav_ul_cart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: 100%;
     border: none;
     background-color: #FBB905;
-    border-radius: 35px;
-    padding: 5px 25px 5px 25px;
+    border-radius: 25px;
+    outline: 0;
+    padding: 0 20px;
+    height: 45px;
+}
+.header_navbar_nav_ul_cart img {
+    width: 50px;
+}
+.header_navbar_nav_ul_cart .cart_number{
+    position: absolute;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    color: #fff;
+    font-size: 10px;
+    line-height: 18px;
+    top: 0;
+    right: 10px;
+}
+.header__logo img{
+    display: block;
+    width: 100px;
 }
 
-.header_navbar_nav_ul_cart img {
-    height: 25px;
+@media ( min-width: 1024px  ) {
+    .header__logo img{
+        display: none;
+    }
+    .header_navbar_nav_ul_cart img {
+        width: 32px;
+        width: 32px;
+    }
 }

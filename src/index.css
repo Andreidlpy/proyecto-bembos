@@ -3,13 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --color-primario: #011689;
+}
 html{
     font-size: 62.5%;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 img{
@@ -20,4 +22,9 @@ img{
     margin: 0 auto;
     width: 1200px;
     max-width: 98%;
+}
+
+button{
+    cursor: pointer;
+    border: none;
 }

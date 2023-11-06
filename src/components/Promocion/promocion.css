@@ -1,0 +1,82 @@
+.promocion{
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px -4px black;
+    min-height: 300px;
+    height: 100%;
+    border: 3px solid #fff;
+    margin: 0 auto;
+}
+.promocion_nombre{
+    color: #030819;
+    font-size: 23px;
+    line-height: 22px;
+    margin: auto;
+    padding-left: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu_content{
+    padding: 10px 15px 15px;
+    text-align: center;
+}
+.menu_nombre{
+    min-height: 73px;
+}
+@media ( min-width: 600px ) {
+    .menu_nombre{
+        min-height: 44px;
+    }
+}
+.promocion_imagen{
+    max-height: 255px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+}
+.promocion img{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all .4s;
+}
+.precio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 0 1rem;
+    font-size: 1.7em;
+    gap: 1rem;
+}
+.precio_actual{
+    font-size: 27px;
+    font-weight: bold;
+}
+.precio_antiguo{
+    font-weight: bold;
+    color: #ec0b0b;
+    text-decoration: line-through;
+}
+.boton{
+    padding: 1rem;
+}
+.btn{
+    padding: 1rem 2rem;
+    border: none;
+}
+.boton_ver{
+    border-radius: 2rem;
+    width: 100%;
+    background-color: #193694;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.banner{
+    width: 100%;
+}
