@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
-
-
-.header {
+header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
 }
 
 .header_horarios {
@@ -17,7 +17,8 @@
 .header_horarios p {
     text-align: center;
     margin: 5px 20px ;
-    font-size: 12px;
+    font-size: 16px;
+    line-height: 1.3;
 }
 .line{
     width: 1px;
@@ -80,13 +81,8 @@
     filter: invert(1);
 }
 
-.header_navbar {
-    height: 65px;
-    display: flex;
-    align-items: center;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+.header_navbar{
+    background-color: #fff;
 }
 
 .header_navbar_list{

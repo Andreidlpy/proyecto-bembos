@@ -156,39 +156,42 @@ const responsiveBannerSlider = {
 export const Home = () => {
   return (
     <>
-    <Carousel 
-      removeArrowOnDeviceType={["tablet", "mobile"]} 
-      showDots 
-      autoPlay 
-      infinite 
-      responsive={ responsiveBannerSlider }
-    >
-      <img className="banner" src="./src/assets/menuSlider-4.webp" alt="menu-slider" />
-      <img className="banner" src="./src/assets/menuSlider-2.webp" alt="menu-slider" />
-      <img className="banner" src="./src/assets/menuSlider03.webp" alt="menu-slider" />
-    </Carousel>
-    <section className="hamburguesas">
-      <div className="promociones container">
-        <h2 className="promociones__heading">
-          Promociones de hamburguesas online
-        </h2>
-        <Carousel  responsive={responsive}   itemClass="carousel">
-            { promociones_online.map((promocion) => (
-              <Promocion key={promocion.id} {...promocion} />
-            ))}
+      <main className="home">
+        <Carousel
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          showDots
+          autoPlay
+          infinite
+          responsive={responsiveBannerSlider}
+        >
+          <img className="banner" src="./src/assets/menuSlider-4.webp" alt="menu-slider" />
+          <img className="banner" src="./src/assets/menuSlider-2.webp" alt="menu-slider" />
+          <img className="banner" src="./src/assets/menuSlider03.webp" alt="menu-slider" />
         </Carousel>
-      </div>
-      <div className="promociones container">
-        <h2 className="promociones__heading">
-          Promociones de hamburguesas online
-        </h2>
-        <Carousel responsive={responsive}   itemClass="carousel">
-            { menu.map((promocion) => (
-              <Promocion key={promocion.id} {...promocion} menu='menu' />
-            ))}
-        </Carousel>
-      </div>
-    </section>
+        <section className="hamburguesas">
+          <div className="promociones container">
+            <h2 className="promociones__heading">
+              Promociones de hamburguesas online
+            </h2>
+            <Carousel responsive={responsive} itemClass="carousel">
+              {promociones_online.map((promocion) => (
+                <Promocion key={promocion.id} {...promocion} />
+              ))}
+            </Carousel>
+          </div>
+          <div className="promociones container">
+            <h2 className="promociones__heading">
+              Promociones de hamburguesas online
+            </h2>
+            <Carousel responsive={responsive} itemClass="carousel">
+              {menu.map((promocion) => (
+                <Promocion key={promocion.id} {...promocion} menu='menu' />
+              ))}
+            </Carousel>
+          </div>
+        </section>
+      </main>
+
     </>
   );
 };

@@ -3,7 +3,7 @@ import "./Header.css";
 
 export const Header = () => {
   return (
-    <header className="header">
+    <header >
       <div className="header_horarios">
         <p>Atención en Lima*</p>
         <div className="line"></div>
@@ -29,15 +29,14 @@ export const Header = () => {
               014191919
             </p>
             <button className="header_banner_sub_login">
-              {" "}
-              <img src="./src/assets/usuario.png" alt="" /> Ingresar o crear tu
-              cuenta
+              <img src="./src/assets/usuario.png" alt="" /> <span>Ingresar o crear tu
+                cuenta</span>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="header">
+      <div className="header_navbar">
         <nav className="container">
           <ul className="header_navbar_nav_ul">
             <div className="header_navbar_list">
@@ -62,24 +61,24 @@ export const Header = () => {
             </div>
 
             <div className="header__logo">
-                <img src="./src/assets/Bembos_logo15.png" alt="" />
+              <img src="./src/assets/Bembos_logo15.png" alt="" />
             </div>
 
             <div className="header_navbar_actions">
-                <div className="header_navbar_actions_button">
-                    <button className="header_navbar_nav_ul_order">
-                        <img src="./src/assets/storeIcon.svg" alt="storeIcon" />
-                        <div className="header_navbar_text">
-                            Pide en tiendas <strong>sin colas</strong>
-                        </div>
-                    </button>
-                </div>
-                <button className="header_navbar_nav_ul_cart">
-                    <div className="cart_number">0</div>
-                    <img src="./src/assets/shopping-cart.png" alt="" />
+              <div className="header_navbar_actions_button">
+                <button className="header_navbar_nav_ul_order">
+                  <img src="./src/assets/storeIcon.svg" alt="storeIcon" />
+                  <div className="header_navbar_text">
+                    Pide en tiendas <strong>sin colas</strong>
+                  </div>
                 </button>
+              </div>
+              <button className="header_navbar_nav_ul_cart">
+                <div className="cart_number">0</div>
+                <img src="./src/assets/shopping-cart.png" alt="" />
+              </button>
             </div>
-           
+
 
           </ul>
         </nav>
