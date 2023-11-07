@@ -1,20 +1,21 @@
-.hamburguesas{
-    padding: 50px 0 20px 0;
+.hamburguesas {
+  padding: 50px 0 20px 0;
 }
-.promociones{
-    padding-bottom: 20px;
+.promociones {
+  padding-bottom: 20px;
 }
-.promociones__heading{
-    padding: 0 13px;
-    text-wrap: balance;
-    font-size: 2.7rem;
-    font-weight: 500;
-    text-transform: uppercase;
+.promociones__heading {
+  padding: 0 13px;
+  text-wrap: balance;
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
-.carousel{
-    padding: 13px;
+.carousel {
+  padding: 13px;
 }
 
-.home{
-    padding-top: 220px;
+.home {
+  padding-top: 220px;
 }
+

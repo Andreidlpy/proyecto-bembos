@@ -1,6 +1,7 @@
 import "./home.css";
 import { Promocion } from "../../components/Promocion/Promocion";
 import Carousel from "react-multi-carousel";
+import { SocialBox } from "../../components/SocialBox/SocialBox";
 const promociones_online = [
   {
     nombre: "Dupla Perfecta",
@@ -77,80 +78,80 @@ const menu = [
   {
     id: 1,
     nombre: "Promociones Exclusivas Web",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/promociones-bembos-delivery.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/promociones-bembos-delivery.webp",
   },
   {
     id: 2,
     nombre: "Hamburguesas",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/hamburguesas_2.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/hamburguesas_2.webp",
   },
   {
     id: 3,
     nombre: "Pollo",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/pollo_2.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/pollo_2.webp",
   },
   {
     id: 4,
     nombre: "Loncheritas",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/loncheritas_1.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/loncheritas_1.webp",
   },
   {
     id: 5,
     nombre: "Complementos",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/complementos_1.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/complementos_1.webp",
   },
   {
     id: 6,
     nombre: "Bebidas ",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-gaseosas.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-gaseosas.webp",
   },
   {
     id: 7,
     nombre: "Helados",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-mini-princesa.webp"
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-mini-princesa.webp",
   },
   {
     id: 8,
     nombre: "Inka Chips",
-    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-inka-chips-1.webp"
-  }
-]
+    img: "https://www.bembos.com.pe/_ipx/q_60,s_275x368/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/500x669-inka-chips-1.webp",
+  },
+];
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 4
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
-    items: 3
+    items: 3,
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
-    items: 2
-  }
+    items: 2,
+  },
 };
 const responsiveBannerSlider = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
-    items: 1
+    items: 1,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 1
+    items: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
-    items: 1
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
-    items: 1
-  }
+    items: 1,
+  },
 };
 
 export const Home = () => {
@@ -164,9 +165,21 @@ export const Home = () => {
           infinite
           responsive={responsiveBannerSlider}
         >
-          <img className="banner" src="./src/assets/menuSlider-4.webp" alt="menu-slider" />
-          <img className="banner" src="./src/assets/menuSlider-2.webp" alt="menu-slider" />
-          <img className="banner" src="./src/assets/menuSlider03.webp" alt="menu-slider" />
+          <img
+            className="banner"
+            src="./src/assets/menuSlider-4.webp"
+            alt="menu-slider"
+          />
+          <img
+            className="banner"
+            src="./src/assets/menuSlider-2.webp"
+            alt="menu-slider"
+          />
+          <img
+            className="banner"
+            src="./src/assets/menuSlider03.webp"
+            alt="menu-slider"
+          />
         </Carousel>
         <section className="hamburguesas">
           <div className="promociones container">
@@ -185,13 +198,13 @@ export const Home = () => {
             </h2>
             <Carousel responsive={responsive} itemClass="carousel">
               {menu.map((promocion) => (
-                <Promocion key={promocion.id} {...promocion} menu='menu' />
+                <Promocion key={promocion.id} {...promocion} menu="menu" />
               ))}
             </Carousel>
           </div>
         </section>
+        <SocialBox />
       </main>
-
     </>
   );
 };
