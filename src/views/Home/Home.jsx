@@ -1,7 +1,11 @@
 import "./home.css";
-import { Promocion } from "../../components/Promocion/Promocion";
+
 import Carousel from "react-multi-carousel";
+
 import { SocialBox } from "../../components/SocialBox/SocialBox";
+import { Banner } from "../../components/Banner/Banner";
+import { Card } from "../../components/Card/Card";
+
 const promociones_online = [
   {
     nombre: "Dupla Perfecta",
@@ -135,52 +139,13 @@ const responsive = {
     items: 2,
   },
 };
-const responsiveBannerSlider = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 640 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
-  },
-};
+
 
 export const Home = () => {
   return (
     <>
       <main className="home">
-        <Carousel
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          showDots
-          autoPlay
-          infinite
-          responsive={responsiveBannerSlider}
-        >
-          <img
-            className="banner"
-            src="./src/assets/menuSlider-4.webp"
-            alt="menu-slider"
-          />
-          <img
-            className="banner"
-            src="./src/assets/menuSlider-2.webp"
-            alt="menu-slider"
-          />
-          <img
-            className="banner"
-            src="./src/assets/menuSlider03.webp"
-            alt="menu-slider"
-          />
-        </Carousel>
+        <Banner />
         <section className="hamburguesas">
           <div className="promociones container">
             <h2 className="promociones__heading">
@@ -188,7 +153,7 @@ export const Home = () => {
             </h2>
             <Carousel responsive={responsive} itemClass="carousel">
               {promociones_online.map((promocion) => (
-                <Promocion key={promocion.id} {...promocion} />
+                <Card key={promocion.id} {...promocion} />
               ))}
             </Carousel>
           </div>
@@ -198,7 +163,7 @@ export const Home = () => {
             </h2>
             <Carousel responsive={responsive} itemClass="carousel">
               {menu.map((promocion) => (
-                <Promocion key={promocion.id} {...promocion} menu="menu" />
+                <Card key={promocion.id} {...promocion} menu="menu" />
               ))}
             </Carousel>
           </div>

@@ -1,6 +1,6 @@
-import "./promocion.css";
+import "./card.css";
 
-export const Promocion = ({
+export const Card = ({
   id,
   nombre,
   img,
@@ -15,12 +15,16 @@ export const Promocion = ({
       </div>
       <div className="menu_content">
         <a className={`promocion_nombre ${ menu ? "menu_nombre" : "" } `}>{nombre}</a>
-        {precio_actual && (
           <div className="precio">
-            <span className="precio_actual">S/.{precio_actual}</span>
-            <span className="precio_antiguo">S/.{precio_antiguo}</span>
+            {
+              precio_actual &&
+              <span className="precio_actual">S/.{  precio_actual }</span>
+            }
+            {
+              precio_antiguo && 
+              <span className="precio_antiguo">S/.{ precio_antiguo }</span>
+            }
           </div>
-        )}
 
         <button className="btn boton_ver">
           {menu !== "menu" ? "Ver más" : "VER TODOS"}
