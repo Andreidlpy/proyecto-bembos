@@ -53,13 +53,19 @@ export const Footer = () => {
                 </div>
 
                 <div className='footer_contacto_libro_container'>
-                    <div className="footer_contacto">
+                    
+                    <div className="footer_contacto_container">
                         <p>¿Quieres recibir promociones y noticias?</p>
 
-                        <input type="text" />
-                        <button>ENVIAR</button>
-                        <input type="checkbox" />
-                        <label htmlFor="">He leído y revisado los términos y condiciones</label>
+                        <div className='footer_contacto'>
+                            <input type="text" className='footer_contacto_input_box' placeholder='Tu correo' />
+                            <button className='footer_contacto_button' >ENVIAR</button>
+                        </div>
+
+                        <div className='footer_contacto_terms'>
+                            <input type="checkbox" />
+                            <label htmlFor="">He leído y revisado los términos y condiciones</label>
+                        </div>
                     </div>
 
                     <div className='footer_img_libro_reclamaciones'>
