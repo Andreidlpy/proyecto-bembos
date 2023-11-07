@@ -62,7 +62,7 @@ header {
 }
 
 .header_banner_sub_delivery span {
-    color: #FBB905;
+    color: var(--color-secundario);
 }
 
 .header_banner_sub_login {
@@ -106,7 +106,7 @@ header {
     justify-content: space-between;
     gap: 20px;
     list-style: none;
-    color: #173083;
+    color: var(--color-base);
     align-items: center;
 }
 
@@ -118,7 +118,7 @@ header {
 }
 
 .header_navbar_nav_ul_item a:hover {
-    border-bottom: 3px solid #E10B19;
+    border-bottom: 3px solid var(--color-rojo-primario);
 }
 
 .header_navbar_actions_button {
@@ -130,7 +130,7 @@ header {
     justify-content: center;
     position: relative;
     height: 100%;
-    background-color: #FBB905;
+    background-color: var(--color-secundario);
     border-radius: 25px;
     padding: 7px 20px;
     width: 100%;
@@ -156,7 +156,7 @@ header {
 }
 
 .header_navbar_text strong{
-    color: #E10B19;
+    color: var(--color-rojo-primario);
     text-transform: uppercase;
 }
 
@@ -174,7 +174,7 @@ header {
     position: relative;
     height: 100%;
     border: none;
-    background-color: #FBB905;
+    background-color: var(--color-secundario);
     border-radius: 25px;
     outline: 0;
     padding: 0 20px;

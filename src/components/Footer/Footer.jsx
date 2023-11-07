@@ -1,0 +1,78 @@
+import React from 'react'
+import './Footer.css';
+
+export const Footer = () => {
+    return (
+        <footer>
+            <div className='footer_social_icons container'>
+                <a target='_blank' href="https://www.facebook.com/bembos/"><img src="./src/assets/face.jpeg" alt="" /></a>
+                <a target='_blank' href="https://www.youtube.com/user/BembosCanal"><img src="./src/assets/yutube.jpeg" alt="" /></a>
+                <a target='_blank' href="https://twitter.com/BembosOficial"><img src="./src/assets/icon-twiter.jpeg" alt="" /></a>
+                <a target='_blank' href="https://www.instagram.com/bembosoficial/?hl=es-la"><img src="./src/assets/icon-instagram.jpeg" alt="" /></a>
+            </div>
+
+            <div className='footer_body_container container'>
+                <div className="footer_body">
+                    <div className='footer_body_maps'>
+                        <p>MAPA DEL SITIO</p>
+                        <div className='footer_body_maps_list'>
+                            <a href="">Locales</a>
+                            <a href="">Nosotros</a>
+                            <a href="">Atención al Cliente</a>
+                            <a href="">Preguntas Frecuentes</a>
+                            <a href="">Mapa de sitio</a>
+                        </div>
+                    </div>
+
+                    <div className="footer_body_terms">
+                        <p>TÉRMINOS Y CONDICIONES</p>
+                        <div className="footer_body_terms_list">
+                            <a href="">Políticas de Datos Personales</a>
+                            <a href="">Términos y condiciones de Promociones</a>
+                            <a href="">Derechos ARCO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='footer_pay_methods'>
+                    <p className='footer_pay_methods_text'>FORMAS DE PAGO</p>
+                    <div className='footer_pay_methods_cards'>
+                        <img src="./src/assets/visa.jpg" alt="" />
+                        <img src="./src/assets/mastercard.png" alt="" />
+                        <img src="./src/assets/american-express.jpg" alt="" />
+                    </div>
+                    <div className='footer_img_safety'>
+                        <img src="./src/assets/icon-safety.jpeg" alt="" />
+                    </div>
+                    <div className='footer_pay_methods_button_container'>
+                        <button className='footer_pay_methods_button'>
+                            <img src="./src/assets/icon-document.png" alt="" />
+                            <p>COMPROBANTES</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div className='footer_contacto_libro_container'>
+                    <div className="footer_contacto">
+                        <p>¿Quieres recibir promociones y noticias?</p>
+
+                        <input type="text" />
+                        <button>ENVIAR</button>
+                        <input type="checkbox" />
+                        <label htmlFor="">He leído y revisado los términos y condiciones</label>
+                    </div>
+
+                    <div className='footer_img_libro_reclamaciones'>
+                        <img src="./src/assets/lirbro.jpeg" alt="" />
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div className="footer_derechos_reservados">
+                <p>© 2019 Todos los derechos reservados</p>
+            </div>
+        </footer>
+    )
+}
