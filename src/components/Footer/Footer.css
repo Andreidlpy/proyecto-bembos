@@ -26,7 +26,7 @@ footer {
 }
 
 .footer_body_maps p,
-.footer_body_terms p{
+.footer_body_terms p {
     text-align: center;
 }
 
@@ -111,6 +111,11 @@ footer {
     border-radius: 10px;
 }
 
+.footer_contacto_container {
+    display: none;
+}
+
+
 @media (min-width: 1024px) {
 
     .footer_body_maps p {
@@ -130,11 +135,11 @@ footer {
         border: none;
     }
 
-    .footer_pay_methods{
+    .footer_pay_methods {
         border: none;
     }
 
-    .footer_pay_methods_text{
+    .footer_pay_methods_text {
         padding: 0 0 25px 0;
     }
 
@@ -161,10 +166,53 @@ footer {
         text-wrap: balance;
     }
 
-    
+    .footer_contacto_container {
+        display: block;
+    }
+
+    .footer_img_libro_reclamaciones {
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
 }
 
 /*FOOTER_BODY MAPS Y TERMS*/
+
+
+.footer_contacto {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer_contacto_container p {
+    font-size: 15px;
+}
+
+.footer_contacto_input_box {
+    border: none;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.footer_contacto_button {
+    border: none;
+    padding: 10px 35px;
+    height: 35px;
+    background: var(--color-secundario);
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer_contacto_terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .footer_derechos_reservados {
     padding-top: 5px;
