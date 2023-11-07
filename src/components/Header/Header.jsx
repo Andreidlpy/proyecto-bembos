@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -17,19 +18,19 @@ export const Header = () => {
       <div className="header_banner_color">
         <div className="header_banner container">
           <div className="header_banner_logo">
-            <a href="">
-              <img src="./src/assets/bembos_logo.webp" alt="" />{" "}
-            </a>
+            <Link  to="/">
+              <img src="./src/assets/bembos_logo.webp" alt="bembos_logo" />{" "}
+            </Link>
           </div>
 
           <div className="header_banner_sub">
             <p className="header_banner_sub_delivery">
-              <img src="./src/assets/phone-volume-solid.svg" alt="" />
+              <img src="./src/assets/phone-volume-solid.svg" alt="phone_icon" />
               <span> Delivery</span> LIMA <br />
               014191919
             </p>
             <button className="header_banner_sub_login">
-              <img src="./src/assets/usuario.png" alt="" /> <span>Ingresar o crear tu
+              <img src="./src/assets/usuario.png" alt="usuario_imagen" /> <span>Ingresar o crear tu
                 cuenta</span>
             </button>
           </div>
@@ -41,22 +42,16 @@ export const Header = () => {
           <ul className="header_navbar_nav_ul">
             <div className="header_navbar_list">
               <li className="header_navbar_nav_ul_item">
-                <a href="">MENÚ</a>
+                <Link to="/">MENÚ</Link>
               </li>
               <li className="header_navbar_nav_ul_item">
-                <a href="">BENEFICIOS</a>
+                <Link to="/promotions">PROMOCIONES</Link>
               </li>
               <li className="header_navbar_nav_ul_item">
-                <a href="">PROMOCIONES</a>
+                <Link to="/locales">LOCALES</Link>
               </li>
               <li className="header_navbar_nav_ul_item">
-                <a href="">LOCALES</a>
-              </li>
-              <li className="header_navbar_nav_ul_item">
-                <a href="">ZONAS DE REPARTO</a>
-              </li>
-              <li className="header_navbar_nav_ul_item">
-                <a href="">NOSOTROS</a>
+                <Link to="/nosotros">NOSOTROS</Link>
               </li>
             </div>
 

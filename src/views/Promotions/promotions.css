@@ -1,0 +1,27 @@
+.promotions{
+    padding-top: 220px;
+}
+
+.promotions__button {
+    padding: 10px 20px;
+
+}
+
+.promotion-content{
+
+}
+
+.promotion-content__text{
+
+}
+
+.promotion-content__imagen{
+
+}
+
+.promotions__button--aceptar{
+    background-color: green;
+}
+.promotions__button--cancelar{
+    background-color: red;
+}
