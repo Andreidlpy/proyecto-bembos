@@ -4,8 +4,10 @@ import './nosotros.css'
 export const Nosotros = () => {
   return (
     <main className="about">
-        <h2 className="about__heading">Nosotros</h2>
+      <div className="about-container container">
+        <h2 className="about__heading">NOSOTROS</h2>
         <Accordion />
+      </div>
     </main>
   )
 }
