@@ -4,6 +4,7 @@ import {App} from './App.jsx'
 import './index.css'
 import "react-multi-carousel/lib/styles.css";
 import { BrowserRouter } from "react-router-dom";
+import 'react-modern-drawer/dist/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

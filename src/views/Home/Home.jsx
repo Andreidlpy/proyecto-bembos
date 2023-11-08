@@ -144,6 +144,7 @@ const responsive = {
 export const Home = () => {
   return (
     <>
+      
       <main className="home">
         <Banner />
         <section className="hamburguesas">
