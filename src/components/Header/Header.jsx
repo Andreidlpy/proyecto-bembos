@@ -14,8 +14,8 @@ export const Header = () => {
   const toggleDrawer = () => {
     setIsOpenCart((prevState) => !prevState);
   
-    if (pathname === '/promotions') {
-      setIsOpenDrawerBottom(!isOpenCart);
+    if ( isOpenCart ) {
+      setIsOpenDrawerBottom(true);
     } else {
       setIsOpenDrawerBottom(false);
     }
