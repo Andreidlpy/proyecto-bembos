@@ -66,21 +66,21 @@ export const Header = () => {
         <div className="header__banner container">
           <div className="header__banner__logo">
             <NavLink to="/">
-              <img src="./src/assets/bembos_logo.webp" alt="bembos__logo" />{" "}
+              <img src="images/bembos_logo.webp" alt="bembos__logo" />{" "}
             </NavLink>
           </div>
 
           <div className="header__banner__sub">
             <p className="header__banner__sub__delivery">
               <img
-                src="./src/assets/phone-volume-solid.svg"
+                src="images/phone-volume-solid.svg"
                 alt="phone__icon"
               />
               <span> Delivery</span> LIMA <br />
               014191919
             </p>
             <button className="header__banner__sub__login">
-              <img src="./src/assets/usuario.png" alt="usuario__imagen" />{" "}
+              <img src="images/usuario.png" alt="usuario__imagen" />{" "}
               <span>Ingresar o crear tu cuenta</span>
             </button>
           </div>
@@ -92,7 +92,7 @@ export const Header = () => {
           <ul className="header__navbar__nav__ul">
             <div className="header__navbar__list">
               <li className="header__navbar__nav__ul__item">
-                <NavLink to="/">MENÚ</NavLink>
+                <NavLink to="/menu">MENÚ</NavLink>
               </li>
               <li className="header__navbar__nav__ul__item">
                 <NavLink to="/promotions">PROMOCIONES</NavLink>
@@ -106,13 +106,13 @@ export const Header = () => {
             </div>
 
             <div className="header____logo">
-              <img src="./src/assets/Bembos__logo15.png" alt="" />
+              <img src="images/Bembos__logo15.png" alt="" />
             </div>
 
             <div className="header__navbar__actions">
               <div className="header__navbar__actions__button">
                 <button className="header__navbar__nav__ul__order">
-                  <img src="./src/assets/storeIcon.svg" alt="storeIcon" />
+                  <img src="images/storeIcon.svg" alt="storeIcon" />
                   <div className="header__navbar__text">
                     Pide en tiendas <strong>sin colas</strong>
                   </div>
@@ -120,7 +120,7 @@ export const Header = () => {
               </div>
               <button className="header__navbar__nav__ul__cart" onClick={ toggleDrawer }>
                 <div className="cart__number">0</div>
-                <img src="./src/assets/shopping-cart.png" alt="" />
+                <img src="images/shopping-cart.png" alt="" />
               </button>
             </div>
           </ul>

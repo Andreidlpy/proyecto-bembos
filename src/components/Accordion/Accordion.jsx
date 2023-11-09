@@ -6,7 +6,7 @@ export const Accordion = () => {
       <details className='accordion-container__section'>
         <summary className='accordion-container__section__title'>¿CÓMO NACIÓ BEMBOS?</summary>
         <div className='accordion-container__section__img'>
-          <img src="./src/assets/banner.webp" alt="bembos-pionero" />
+          <img src="images/banner.webp" alt="bembos-pionero" />
         </div>
         <div className='accordion-container__section__text'>
           <p>En 1988 un par de jóvenes empresarios peruanos decidió incursionar en un mercado poco difundido hasta el momento en el Perú: el mercado de las hamburguesas.</p>
@@ -19,7 +19,7 @@ export const Accordion = () => {
       <details className='accordion-container__section'>
         <summary className='accordion-container__section__title'>¿QUÉ OFRECEMOS?</summary>
         <div className='accordion-container__section__img'>
-          <img src="./src/assets/banner.webp" alt="bembos-pionero" />
+          <img src="images/banner.webp" alt="bembos-pionero" />
         </div >
         <div className='accordion-container__section__text'>
           <p>La mejor hamburguesa a la parrilla por su sabor único y sus creativas combinaciones a partir de insumos de la más alta calidad ofrecida en nuestros atractivos locales. Nuestro espíritu innovador y expresivo se manifiesta en nuestros productos, pero también en nuestros locales, la música, nuestro ambiente y servicios.</p>
@@ -30,7 +30,7 @@ export const Accordion = () => {
       <details className='accordion-container__section'>
         <summary className='accordion-container__section__title'>CÓMO SE CREÓ LA HAMBURGUESA BEMBOS</summary>
         <div className='accordion-container__section__img'>
-          <img src="./src/assets/banner.webp" alt="bembos-pionero" />
+          <img src="images/banner.webp" alt="bembos-pionero" />
         </div>
         <div className='accordion-container__section__text'>
           <p>Después de muchísimas pruebas y degustaciones descubrieron las tres cualidades que debía tener la hamburguesa: fina carne de novillo (ganado vacuno de hasta 3 años), sazón agradable al exigente paladar peruano y que sea cocida al carbón</p>
@@ -42,7 +42,7 @@ export const Accordion = () => {
       <details className='accordion-container__section'>
         <summary className='accordion-container__section__title'>EN LA ACTUALIDAD</summary>
         <div className='accordion-container__section__img'>
-          <img src="./src/assets/banner.webp" alt="bembos-pionero" />
+          <img src="images/banner.webp" alt="bembos-pionero" />
         </div>
         <div className='accordion-container__section__text'>
           <p>BEMBOS cuenta con más de 55 locales en el Perú distribuidos en los principales distritos de Lima, con presencia en los más importantes centros comerciales de esta ciudad: Jockey Plaza, Plaza San Miguel, Caminos del Inca, Mall Aventura Plaza, Megaplaza y en Larcomar, así como en los centros de comercio masivo como son el Jirón de la Unión en el centro de Lima y la avenida Larco en Miraflores donde contamos con 2 locales, 10 tiendas en provincia ubicadas en las ciudades de Trujillo, Chiclayo, Piura, Arequipa y Cuzco, así como de 14 módulos dedicados a la venta exclusiva de postres y helados. Por otro lado contamos con los modernos Bembos Café, ubicados en 10 tiendas incluyendo la tienda de Cuzco. Bembos también está empezando a abrirse camino en el mercado internacional, desarrollando diversos proyectos que tienen como finalidad la consolidación en el mercado internacional.</p>

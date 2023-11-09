@@ -1,5 +1,5 @@
+import { images } from "../../assets/bannerImages";
 import { Banner } from "../../components/Banner/Banner";
-import { Card } from "../../components/Card/Card";
 import { Contact } from "../../components/Home/Contact";
 import { Features } from "../../components/Home/Features";
 import { LastBembos } from "../../components/Home/LastBembos";
@@ -13,7 +13,7 @@ export const Promotions = () => {
         Disfruta de nuestras promociones bembos
       </h1>
       <div className="separador"></div>
-      <Banner />
+      <Banner images={ images } />
       <Promo />
       <LastBembos />
       <Features />

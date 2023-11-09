@@ -19,7 +19,7 @@ const responsiveBannerSlider = {
     items: 1,
   },
 };
-export const Banner = () => {
+export const Banner = ({ images = [] }) => {
   return (
     <Carousel
       removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -28,21 +28,16 @@ export const Banner = () => {
       infinite
       responsive={responsiveBannerSlider}
     >
-      <img
-        className="banner"
-        src="./src/assets/menuSlider-4.webp"
-        alt="menu-slider"
-      />
-      <img
-        className="banner"
-        src="./src/assets/menuSlider-2.webp"
-        alt="menu-slider"
-      />
-      <img
-        className="banner"
-        src="./src/assets/menuSlider03.webp"
-        alt="menu-slider"
-      />
+      {
+        images.map(( image ) => (
+          <img
+              key={image}
+              className="banner"
+              src={ image.src }
+              alt={ image.alt }
+          />
+        ))
+      }
     </Carousel>
   );
 };
