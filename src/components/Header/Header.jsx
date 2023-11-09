@@ -3,6 +3,8 @@ import { NavLink } from "../NavLink";
 
 import Drawer from "react-modern-drawer";
 import { useDrawer } from "../../hooks/useDrawer";
+import { Cart } from "../Cart/Cart";
+
 
 export const Header = () => {
    const { isOpenCart , isOpenDrawerBottom ,toggleDrawer , openDrawer }=  useDrawer();
@@ -15,7 +17,9 @@ export const Header = () => {
         style={{ maxWidth: "90%", width: "500px" }}
         zIndex={20}
       >
+        <Cart onToggleDrawer ={toggleDrawer} />
       </Drawer>
+      
       {isOpenDrawerBottom && (
         <div className="drawer">
           <div className="drawer__buton">
