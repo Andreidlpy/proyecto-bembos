@@ -11,17 +11,17 @@ export const SocialBox = () => {
           <p className="content__share-text">Compartir en</p>
           <div className="content__buttons">
             <button className="content__button content__button--twitter">
-              <img src="./src/assets/twitter.svg" alt="Twitter" />
+              <img src="images/twitter.svg" alt="Twitter" />
               Twitter
             </button>
             <button className="content__button content__button--facebook">
-              <img src="./src/assets/facebook.svg" alt="Facebook" />
+              <img src="images/facebook.svg" alt="Facebook" />
               Facebook
             </button>
           </div>
         </div>
         <div className="content__right">
-          <img src="./src/assets/descarga.png" alt="Bembos" loading="lazy" />
+          <img src="images/descarga.png" alt="Bembos" loading="lazy" />
           <iframe
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbembos%2F&amp;tabs&amp;width=500&amp;height=130&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=true&amp;appId"
             width="500"

@@ -38,18 +38,18 @@ export const Header = () => {
           <div className="header__banner container">
             <div className="header__banner__logo">
               <NavLink to="/">
-                <img src="images/bembos_logo.webp" alt="bembos__logo" />{" "}
+                <img src="/images/bembos_logo.webp" alt="bembos__logo" />{" "}
               </NavLink>
             </div>
 
             <div className="header__banner__sub">
               <p className="header__banner__sub__delivery">
-                <img src="images/phone-volume-solid.svg" alt="phone__icon" />
+                <img src="/images/phone-volume-solid.svg" alt="phone__icon" />
                 <span> Delivery</span> LIMA <br />
                 014191919
               </p>
               <button className="header__banner__sub__login">
-                <img src="images/usuario.png" alt="usuario__imagen" />{" "}
+                <img src="/images/usuario.png" alt="usuario__imagen" />{" "}
                 <span>Ingresar o crear tu cuenta</span>
               </button>
             </div>
@@ -75,13 +75,13 @@ export const Header = () => {
               </div>
 
               <div className="header____logo">
-                <img src="images/Bembos__logo15.png" alt="" />
+                <img src="/images/Bembos_logo15.png" alt="bembos-logo-15" />
               </div>
 
               <div className="header__navbar__actions">
                 <div className="header__navbar__actions__button">
                   <button className="header__navbar__nav__ul__order">
-                    <img src="images/storeIcon.svg" alt="storeIcon" />
+                    <img src="/images/storeIcon.svg" alt="storeIcon" />
                     <div className="header__navbar__text">
                       Pide en tiendas <strong>sin colas</strong>
                     </div>
@@ -92,7 +92,7 @@ export const Header = () => {
                   onClick={toggleDrawer}
                 >
                   <div className="cart__number">0</div>
-                  <img src="images/shopping-cart.png" alt="" />
+                  <img src="/images/shopping-cart.png" alt="" />
                 </button>
               </div>
             </ul>

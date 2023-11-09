@@ -5,10 +5,10 @@ export const Footer = () => {
     return (
         <footer>
             <div className='footer_social_icons container'>
-                <a target='_blank' href="https://www.facebook.com/bembos/"><img src="images/face.jpeg" alt="" /></a>
-                <a target='_blank' href="https://www.youtube.com/user/BembosCanal"><img src="images/yutube.jpeg" alt="" /></a>
-                <a target='_blank' href="https://twitter.com/BembosOficial"><img src="images/icon-twiter.jpeg" alt="" /></a>
-                <a target='_blank' href="https://www.instagram.com/bembosoficial/?hl=es-la"><img src="images/icon-instagram.jpeg" alt="" /></a>
+                <a target='_blank' href="https://www.facebook.com/bembos/"><img src="/images/face.jpeg" alt="" /></a>
+                <a target='_blank' href="https://www.youtube.com/user/BembosCanal"><img src="/images/yutube.jpeg" alt="" /></a>
+                <a target='_blank' href="https://twitter.com/BembosOficial"><img src="/images/icon-twiter.jpeg" alt="" /></a>
+                <a target='_blank' href="https://www.instagram.com/bembosoficial/?hl=es-la"><img src="/images/icon-instagram.jpeg" alt="" /></a>
             </div>
 
             <div className='footer_body_container container'>
@@ -37,16 +37,16 @@ export const Footer = () => {
                 <div className='footer_pay_methods'>
                     <p className='footer_pay_methods_text'>FORMAS DE PAGO</p>
                     <div className='footer_pay_methods_cards'>
-                        <img src="images/visa.jpg" alt="" />
-                        <img src="images/mastercard.png" alt="" />
-                        <img src="images/american-express.jpg" alt="" />
+                        <img src="/images/visa.jpg" alt="" />
+                        <img src="/images/mastercard.png" alt="" />
+                        <img src="/images/american-express.jpg" alt="" />
                     </div>
                     <div className='footer_img_safety'>
-                        <img src="images/icon-safety.jpeg" alt="" />
+                        <img src="/images/icon-safety.jpeg" alt="" />
                     </div>
                     <div className='footer_pay_methods_button_container'>
                         <button className='footer_pay_methods_button'>
-                            <img src="images/icon-document.png" alt="" />
+                            <img src="/images/icon-document.png" alt="" />
                             <p>COMPROBANTES</p>
                         </button>
                     </div>
@@ -69,7 +69,7 @@ export const Footer = () => {
                     </div>
 
                     <div className='footer_img_libro_reclamaciones'>
-                        <img src="images/lirbro.jpeg" alt="" />
+                        <img src="/images/lirbro.jpeg" alt="" />
                     </div>
                 </div>
 

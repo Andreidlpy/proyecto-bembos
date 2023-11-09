@@ -12,6 +12,7 @@ import ScrollTop from "./components/ScrollTop";
 import { Locals } from "./views/Locals/Locals";
 
 import { Menu } from "./views/Menu/Menu";
+import { Producto } from "./views/Producto/Producto";
 
 export const App = () => {
   return (
@@ -21,6 +22,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/promotions" element={<Promotions />} />
+        <Route path="/promociones/:name" element={ <Producto /> } />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/locales" element={<Locals/>} /> 
         <Route path="/menu" element={<Menu />} />

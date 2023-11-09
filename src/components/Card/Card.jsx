@@ -1,5 +1,5 @@
 import "./card.css";
-
+import { Link} from "react-router-dom";
 export const Card = ({
   id,
   nombre,
@@ -11,24 +11,27 @@ export const Card = ({
   return (
     <article className="promocion" key={id}>
       <div className="promocion_imagen">
-        <img loading="lazy" src={img} alt="" />
+        <img loading="lazy" src={img} alt="image-card" />
       </div>
       <div className="menu_content">
-        <a className={`promocion_nombre ${ menu ? "menu_nombre" : "" } `}>{nombre}</a>
-          <div className="precio">
-            {
-              precio_actual &&
-              <span className="precio_actual">S/.{  precio_actual }</span>
-            }
-            {
-              precio_antiguo && 
-              <span className="precio_antiguo">S/.{ precio_antiguo }</span>
-            }
-          </div>
-
-        <button className="btn boton_ver">
-          {menu !== "menu" ? "Ver más" : "VER TODOS"}
-        </button>
+        <a className={`promocion_nombre ${menu ? "menu_nombre" : ""} `}>
+          {nombre}
+        </a>
+        <div className="precio">
+          {precio_actual && (
+            <span className="precio_actual">S/.{precio_actual}</span>
+          )}
+          {precio_antiguo && (
+            <span className="precio_antiguo">S/.{precio_antiguo}</span>
+          )}
+        </div>
+        {menu !== "menu" ? (
+          <Link to={`/promociones/${nombre}`}>
+            <button className="btn boton_ver">Ver más</button>
+          </Link>
+        ) : (
+          <button className="btn boton_ver">VER TODOS</button>
+        )}
       </div>
     </article>
   );
