@@ -9,6 +9,8 @@ import {
 import { Promotions } from "./views/Promotions/Promotions";
 import { Nosotros } from "./views/Nosotros/Nosotros";
 import ScrollTop from "./components/ScrollTop";
+import { Locals } from "./views/Locals/Locals";
+
 import { Menu } from "./views/Menu/Menu";
 
 export const App = () => {
@@ -16,12 +18,14 @@ export const App = () => {
     <>
       <ScrollTop />
       <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/promotions" element={<Promotions />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/menu" element={<Menu />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/promotions" element={<Promotions />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/locales" element={<Locals/>} /> 
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+        
       <Footer />
     </>
   );
