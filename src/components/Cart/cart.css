@@ -1,0 +1,108 @@
+.cart {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.cart-heading {
+  background-color: #e8e8e8;
+  color: var(--color-rojo-primario);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart-heading__close {
+  background-color: var(--color-rojo-primario);
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+.cart-heading__text-alert {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+}
+
+.cart-heading__text-alert img {
+  height: 22px;
+}
+
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto;
+  height: 700px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart__content-empty {
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  color: #ccc;
+}
+
+.cart__content-add {
+  font-size: 18px;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.cart__buttons {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  width: 100%;
+  gap: 10px;
+}
+
+.cart__button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  display: block;
+}
+
+.cart__button--pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #808080;
+  border: 2px solid #808080;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cart__button-count {
+  background-color: #fff;
+  color: black;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  
+}
+
+.cart__button--shop {
+  border: 2px solid var(--color-rojo-primario);
+  color: var(--color-rojo-primario);
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  background-color: #fff;
+}
