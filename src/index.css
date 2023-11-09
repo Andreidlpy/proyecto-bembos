@@ -39,3 +39,6 @@ button {
     border: none;
     font-family: 'Oswald', sans-serif;
 }
+.banner__dots{
+    z-index: 2;
+}

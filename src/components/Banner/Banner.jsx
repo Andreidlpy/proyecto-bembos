@@ -27,6 +27,7 @@ export const Banner = ({ images = [] }) => {
       autoPlay
       infinite
       responsive={responsiveBannerSlider}
+      className="banner__dots"
     >
       {
         images.map(( image ) => (
