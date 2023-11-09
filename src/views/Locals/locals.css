@@ -1,0 +1,73 @@
+.locals-background {
+    background-color: #F6F7F8;
+    padding-top: 220px;
+
+}
+
+.locals__title {
+    color: var(--color-secundario);
+    background-color: var(--color-base);
+    border-radius: 10px 10px 0 0;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.locals {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.locals__container__city p:first-child {
+    background-color: var(--color-base);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.locals__container__city__lima__district,
+.locals__container__city {
+    display: flex;
+    flex-direction: column;
+}
+
+.locals__container__city__lima__district a,
+.locals__container__city a {
+    margin: 10px 0;
+}
+
+.colmuns {
+    width: 100%;
+}
+
+.locals__container__city__lima__district p:first-child {
+    background-color: var(--color-secundario);
+    color: var(--color-base);
+    border-radius: 10px;
+}
+
+
+@media (min-width: 1024px) {
+    .locals__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding: 30px 120px;
+    }
+
+    .locals-background {
+        padding: 290px 0 20px 0;
+    }
+
+    .locals {
+        padding-bottom: 50px;
+    }
+}
+
