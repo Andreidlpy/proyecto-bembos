@@ -92,7 +92,7 @@ export const Header = () => {
           <ul className="header__navbar__nav__ul">
             <div className="header__navbar__list">
               <li className="header__navbar__nav__ul__item">
-                <NavLink to="/">MENÚ</NavLink>
+                <NavLink to="/menu">MENÚ</NavLink>
               </li>
               <li className="header__navbar__nav__ul__item">
                 <NavLink to="/promotions">PROMOCIONES</NavLink>
