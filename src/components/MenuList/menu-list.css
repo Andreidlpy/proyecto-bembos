@@ -1,0 +1,75 @@
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding: 40px 0;
+}
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.menu__name-item {
+  position: absolute;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  top: 25px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -4px -4px 0 #d90f06, -4px -3px 0 #d90f06, -4px -2px 0 #d90f06,
+    -4px -1px 0 #d90f06, -4px 0 0 #d90f06, -4px 1px 0 #d90f06,
+    -4px 2px 0 #d90f06, -4px 3px 0 #d90f06, -4px 4px 0 #d90f06,
+    -3px -4px 0 #d90f06, -3px -3px 0 #d90f06, -3px -2px 0 #d90f06,
+    -3px -1px 0 #d90f06, -3px 0 0 #d90f06, -3px 1px 0 #d90f06,
+    -3px 2px 0 #d90f06, -3px 3px 0 #d90f06, -3px 4px 0 #d90f06,
+    -2px -4px 0 #d90f06, -2px -3px 0 #d90f06, -2px -2px 0 #d90f06,
+    -2px -1px 0 #d90f06, -2px 0 0 #d90f06, -2px 1px 0 #d90f06,
+    -2px 2px 0 #d90f06, -2px 3px 0 #d90f06, -2px 4px 0 #d90f06,
+    -1px -4px 0 #d90f06, -1px -3px 0 #d90f06, -1px -2px 0 #d90f06,
+    -1px -1px 0 #d90f06, -1px 0 0 #d90f06, -1px 1px 0 #d90f06,
+    -1px 2px 0 #d90f06, -1px 3px 0 #d90f06, -1px 4px 0 #d90f06, 0 -4px 0 #d90f06,
+    0 -3px 0 #d90f06, 0 -2px 0 #d90f06, 0 -1px 0 #d90f06, 0 0 0 #d90f06,
+    0 1px 0 #d90f06, 0 2px 0 #d90f06, 0 3px 0 #d90f06, 0 4px 0 #d90f06,
+    1px -4px 0 #d90f06, 1px -3px 0 #d90f06, 1px -2px 0 #d90f06,
+    1px -1px 0 #d90f06, 1px 0 0 #d90f06, 1px 1px 0 #d90f06, 1px 2px 0 #d90f06,
+    1px 3px 0 #d90f06, 1px 4px 0 #d90f06, 2px -4px 0 #d90f06, 2px -3px 0 #d90f06,
+    2px -2px 0 #d90f06, 2px -1px 0 #d90f06, 2px 0 0 #d90f06, 2px 1px 0 #d90f06,
+    2px 2px 0 #d90f06, 2px 3px 0 #d90f06, 2px 4px 0 #d90f06, 3px -4px 0 #d90f06,
+    3px -3px 0 #d90f06, 3px -2px 0 #d90f06, 3px -1px 0 #d90f06, 3px 0 0 #d90f06,
+    3px 1px 0 #d90f06, 3px 2px 0 #d90f06, 3px 3px 0 #d90f06, 3px 4px 0 #d90f06,
+    4px -4px 0 #d90f06, 4px -3px 0 #d90f06, 4px -2px 0 #d90f06,
+    4px -1px 0 #d90f06, 4px 0 0 #d90f06, 4px 1px 0 #d90f06, 4px 2px 0 #d90f06,
+    4px 3px 0 #d90f06, 4px 4px 0 #d90f06;
+}
+
+.menu-card button {
+  background-color: var(--color-primario);
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 80px;
+  border-radius: 30px;
+}
+.menu-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: left;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 600px) {
+  .menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu__name-item {
+    font-size: 30px;
+    left: 40px;
+  }
+}
