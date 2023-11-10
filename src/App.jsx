@@ -13,6 +13,7 @@ import { Locals } from "./views/Locals/Locals";
 
 import { Menu } from "./views/Menu/Menu";
 import { Producto } from "./views/Producto/Producto";
+import { BottomNavigation } from "./components/BottomNavigationBar/BottomNavigation";
 
 export const App = () => {
   return (
@@ -29,6 +30,7 @@ export const App = () => {
       </Routes>
         
       <Footer />
+      <BottomNavigation/>
     </>
   );
 };
