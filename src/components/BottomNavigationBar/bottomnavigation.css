@@ -2,6 +2,7 @@
   position: sticky;
   bottom: 0;
   background-color: var(--color-base);
+  display: block;
 }
 
 .bottomnav {
@@ -47,3 +48,10 @@
   height: 25px;
   width: 25px;
 }
+
+@media (min-width: 1024px) {
+    .bottomnav_container {
+      display: none;
+    }
+  }
+  
