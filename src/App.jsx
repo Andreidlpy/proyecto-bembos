@@ -13,6 +13,7 @@ import { Producto } from "./views/Producto/Producto";
 import useCounter from "./hooks/useCounter";
 
 
+import { BottomNavigation } from "./components/BottomNavigationBar/BottomNavigation";
 
 export const App = () => {
   const { cart, incrementar, decrementar, counter } = useCounter();
@@ -47,6 +48,7 @@ export const App = () => {
       </Routes>
 
       <Footer />
+      <BottomNavigation/>
     </>
   );
 };
