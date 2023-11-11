@@ -6,7 +6,7 @@ import { useDrawer } from "../../hooks/useDrawer";
 import { Cart } from "../Cart/Cart";
 
 
-export const Header = () => {
+export const Header = ({onIncrement , cart, onDecrement, counter}) => {
    const { isOpenCart , isOpenDrawerBottom ,toggleDrawer , openDrawer }=  useDrawer();
   return (
     <>
@@ -17,7 +17,13 @@ export const Header = () => {
         style={{ maxWidth: "90%", width: "500px" }}
         zIndex={20}
       >
-        <Cart onToggleDrawer ={toggleDrawer} />
+        <Cart 
+          onIncrement={onIncrement}
+          cart={cart}
+          onDecrement={onDecrement}
+          counter={counter}
+          onToggleDrawer ={toggleDrawer} 
+        />
       </Drawer>
       
       {isOpenDrawerBottom && (
@@ -29,7 +35,7 @@ export const Header = () => {
       )}
       <header>
         <div className="header__horarios">
-          <p>Atención en Lima*</p>
+          <p>Atención <br /> en Lima*</p>
           <div className="line"></div>
           <p>
             Delivery: Hasta las 11 pm. <br />
@@ -68,7 +74,7 @@ export const Header = () => {
                   <NavLink to="/menu">MENÚ</NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
-                  <NavLink to="/promotions">PROMOCIONES</NavLink>
+                  <NavLink to="/promociones">PROMOCIONES</NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
                   <NavLink to="/locales">LOCALES</NavLink>

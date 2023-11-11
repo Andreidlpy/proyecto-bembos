@@ -16,6 +16,8 @@
     text-decoration: none;
 }
 .menu_content{
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
     padding: 10px 15px 15px;
     text-align: center;
 }

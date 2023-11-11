@@ -1,9 +1,16 @@
 import React from 'react'
 import './Footer.css';
+import { useLocation } from 'react-router-dom';
 
 export const Footer = () => {
+     const { pathname } = useLocation();
+     console.log(pathname.startsWith('/promociones/'))
     return (
-        <footer>
+        <>
+                {
+                    !pathname.startsWith('/promociones/') &&
+                    (
+                    <footer>
             <div className='footer_social_icons container'>
                 <a target='_blank' href="https://www.facebook.com/bembos/"><img src="/images/face.jpeg" alt="" /></a>
                 <a target='_blank' href="https://www.youtube.com/user/BembosCanal"><img src="/images/yutube.jpeg" alt="" /></a>
@@ -79,6 +86,10 @@ export const Footer = () => {
             <div className="footer_derechos_reservados">
                 <p>© 2019 Todos los derechos reservados</p>
             </div>
-        </footer>
+                    </footer>
+                    )
+                }       
+        </>
+        
     )
 }

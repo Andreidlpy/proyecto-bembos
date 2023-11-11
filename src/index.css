@@ -42,3 +42,14 @@ button {
 .banner__dots{
     z-index: 2;
 }
+
+.page__wrapper{
+    padding-top: 141px;
+}
+
+@media ( min-width: 1024px ) {
+    .page__wrapper{
+        padding-top: 220px;
+    }
+}
+

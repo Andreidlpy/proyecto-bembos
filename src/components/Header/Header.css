@@ -11,13 +11,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
+    padding: 10px 0;
+    height: 70px;
 }
 
-.header__horarios p {
+.header__horarios  p {
+    font-size: 12px;
     text-align: center;
-    margin: 5px 20px ;
-    font-size: 16px;
+    text-wrap: balance;
     line-height: 1.3;
 }
 .line{
@@ -112,16 +114,16 @@ header {
 
 .header__navbar__nav__ul__item a {
     text-decoration: none;
-    transition: border-bottom .2s, color .2s;
+    transition: all .3s, color .3s;
     font-size: 20px;
     color: var(--color-primario);
 }
 
 .header__navbar__nav__ul__item a:hover {
-    border-bottom: 3px solid var(--color-rojo-primario);
+    border-bottom: 1px solid var(--color-rojo-primario);
 }
 .header__navbar__nav__ul__item .is-active{
-    border-bottom: 3px solid var(--color-rojo-primario);
+    border-bottom: 1px solid var(--color-rojo-primario);
 }
 .header__navbar__actions__button {
     width: 65%
@@ -230,6 +232,9 @@ header {
     .header__navbar__nav__ul__cart img {
         width: 32px;
         width: 32px;
+    }
+    .header__horarios  p {
+        font-size: 16px;
     }
 }
 
