@@ -3,7 +3,11 @@ import { promociones_online } from "../../assets/promociones";
 
 import "./producto.css";
 
-export const Producto = ({ cart , onDecrement , onIncrement, counter}) => {
+export const Producto = ({
+  handleIncrement,
+  handleDecrement,
+  cart
+}) => {
   const location = useLocation();
   const { name } = useParams();
 
@@ -23,14 +27,13 @@ export const Producto = ({ cart , onDecrement , onIncrement, counter}) => {
       );
     });
 
-  const promocion = promociones_online.find(
-    (prom) => prom.nombre === name
-  );
+  const promocion = promociones_online.find((prom) => prom.nombre === name);
 
-  const prodCantidad = cart.find( ( c ) => c.id === promocion.id );
-  console.log(prodCantidad)
+  const prodCantidad = cart.find((c) => c.id === promocion.id);
+
+  
   return (
-    <section className="producto " >
+    <section className="producto">
       <div className="producto__breadcumbs">
         <span>{crumbs}</span>
       </div>
@@ -46,21 +49,32 @@ export const Producto = ({ cart , onDecrement , onIncrement, counter}) => {
         </div>
         <div className="details__content">
           <div className="details__text">
-          <h1 className="details__title">{promocion.nombre}</h1>
-          <p className="details__description">{promocion.descripcion}</p>
+            <h1 className="details__title">{promocion.nombre}</h1>
+            <p className="details__description">{promocion.descripcion}</p>
           </div>
           <div className="details__addCart">
             <div className="details__count">
-              <button 
-                className="btn details__button--decrement"
-                onClick={ () =>  onDecrement ( promocion.id  ) }
-              >-</button>
-              <span className="details__number">{ prodCantidad?.cantidad ? prodCantidad?.cantidad :  0 }</span>
               <button
-              onClick={ () =>  onIncrement( promocion) }
-              className="btn details__button--increment">+</button>
+                className="btn details__button--decrement"
+                onClick={() => handleDecrement(promocion.id)}
+              >
+                -
+              </button>
+              <span className="details__number">
+                {prodCantidad?.cantidad && prodCantidad.cantidad || 0 }
+              </span>
+              <button
+                onClick={() => handleIncrement(promocion)}
+                className="btn details__button--increment"
+              >
+                +
+              </button>
             </div>
-            <button className="btn details__button--add" onClick={() => { console.log('agregar')}} disabled={ Object.keys( cart ).length < 1  }>
+            <button
+              className="btn details__button--add"
+              onClick={() => transferToCart()}
+              // disabled={ pendingProducts.length < 1 }
+            >
               Agregar
               <span className="details__price">S/.30.30</span>
             </button>

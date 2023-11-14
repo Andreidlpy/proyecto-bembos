@@ -3,6 +3,8 @@
   bottom: 0;
   background-color: var(--color-base);
   display: block;
+  z-index: 1;
+  width: 100%;
 }
 
 .bottomnav {
@@ -23,6 +25,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
 }
 
 .bottomnav__item__count {

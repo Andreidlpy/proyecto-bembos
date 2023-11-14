@@ -130,7 +130,7 @@
   gap: 10px;
 }
 
-input[type="text"],
+.contact__row input[type="text"],
 input[type="email"],
 input[type="tel"] {
   width: 100%;

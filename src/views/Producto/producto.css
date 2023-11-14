@@ -1,3 +1,4 @@
+
 .producto{
     position: relative;
 }
@@ -31,10 +32,11 @@
     text-wrap: balance;
 }
 .details{
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 93vh;
+    height: 90vh;
     position: absolute;
     width: 100%;
 }
@@ -85,6 +87,7 @@
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        height: 100%;
    }
    .details__imagen-contenedor {
         position: relative;

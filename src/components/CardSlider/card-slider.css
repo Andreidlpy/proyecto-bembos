@@ -1,0 +1,88 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .swiper-slide {
+    background: #fff;
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  
+  
+  .swiper-wrapper {
+    padding: 10px 3px 44px 3px;
+  }
+  .swiper-container-wrapper {
+    position: relative;
+    width: calc(70% + 98px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-button-next{
+    top: 0;
+    right: 10PX;
+  }
+  .swiper-button-prev{
+    top: 0;
+    right: 70px;
+    left: auto;
+  }
+  .swiper-button-next, 
+  .swiper-button-prev{
+    background-color: var(--color-base);
+    border-radius: 50%;
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-20px);
+  }
+  .swiper-button-next::after{
+    content: '';
+    width: 11px;
+    border-radius: 1em;
+    position: absolute;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDggMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjM4MDI0MyAxNC41NzE2QzAuODg1NDc3IDE1LjE0MjggMS43MDAwNCAxNS4xNDI4IDIuMjA1MjcgMTQuNTcxNkw3LjY5ODQxIDguNjY3MzFDOC4xMDA1MyA4LjIxMjY3IDguMTAwNTMgNy40NzgyNiA3LjY5ODQgNy4wMjM2M0wyLjIwNTMxIDAuNDI4NDA0QzEuNzAwMDcgLTAuMTQyODAyIDAuODg1NTE0IC0wLjE0MjgwMiAwLjM4MDI4IDAuNDI4NDA1Qy0wLjEyNDk1NCAwLjk5OTYxMiAtMC4xMjQ5NTQgMS45MjA1NCAwLjM4MDI4IDIuNDkxNzRMNC43NzAxMSA3Ljg1MTNMMC4zNjk5MzIgMTIuNTE5OUMtMC4xMjQ5OTEgMTMuMDc5NSAtMC4xMjQ5OTEgMTQuMDEyIDAuMzgwMjQzIDE0LjU3MTZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K) no-repeat 50%;
+    height: 23px;
+    background-size: 100%;
+  }
+  .swiper-button-prev::after{
+    content: '';
+    width: 11px;
+    border-radius: 1em;
+    position: absolute;
+    background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDggMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjM4MDI0MyAxNC41NzE2QzAuODg1NDc3IDE1LjE0MjggMS43MDAwNCAxNS4xNDI4IDIuMjA1MjcgMTQuNTcxNkw3LjY5ODQxIDguNjY3MzFDOC4xMDA1MyA4LjIxMjY3IDguMTAwNTMgNy40NzgyNiA3LjY5ODQgNy4wMjM2M0wyLjIwNTMxIDAuNDI4NDA0QzEuNzAwMDcgLTAuMTQyODAyIDAuODg1NTE0IC0wLjE0MjgwMiAwLjM4MDI4IDAuNDI4NDA1Qy0wLjEyNDk1NCAwLjk5OTYxMiAtMC4xMjQ5NTQgMS45MjA1NCAwLjM4MDI4IDIuNDkxNzRMNC43NzAxMSA3Ljg1MTNMMC4zNjk5MzIgMTIuNTE5OUMtMC4xMjQ5OTEgMTMuMDc5NSAtMC4xMjQ5OTEgMTQuMDEyIDAuMzgwMjQzIDE0LjU3MTZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K) no-repeat 50%;
+    height: 23px;
+    background-size: 100%;
+    transform: rotate(180deg);
+  }
+
+@media ( min-width: 1024px ) {
+  .swiper-button-next{
+    right: -5%;
+  }
+  .swiper-button-prev{
+    left: -5%;
+  }
+  .swiper-button-next, 
+  .swiper-button-prev{
+    background-color: var(--color-base);
+    border-radius: 50%;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}

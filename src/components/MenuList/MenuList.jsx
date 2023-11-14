@@ -8,6 +8,7 @@ export const MenuList = () => {
       id: 1,
       nombre: "Promociones Exclusivas Web",
       img: "https://www.bembos.com.pe/_ipx/q_75,s_540x382/https://d31npzejelj8v1.cloudfront.net/media/catalog/category/509x360-duo-qt-categoria-nuevo-mayo.jpg",
+      tipo: 'promocion',
     },
     {
       id: 2,
@@ -47,6 +48,7 @@ export const MenuList = () => {
   ];
   return (
     <section className="menu-list">
+
       { menus.map(( menu ) => (
         <MenuItem key={ menu.id } { ...menu } />
       ))}

@@ -6,11 +6,11 @@ export const useDrawer = () => {
   const { pathname } = useLocation();
   const [isOpenCart, setIsOpenCart] = useState(false);
   const [isOpenDrawerBottom, setIsOpenDrawerBottom] = useState(false);
-  
+  const urlPromo = '/promociones/delivery-hamburguesas';
   const toggleDrawer = () => {
     setIsOpenCart((prevState) => !prevState);
   
-    if ( isOpenCart && pathname === '/promotions' ) {
+    if ( isOpenCart && pathname === urlPromo ) {
       setIsOpenDrawerBottom(true);
     } else {
       setIsOpenDrawerBottom(false);
@@ -23,7 +23,7 @@ export const useDrawer = () => {
   }
   
   useEffect(() => {
-    if (pathname !== '/promotions') {
+    if (pathname !== urlPromo) {
       setIsOpenDrawerBottom(false);
     } else {
       setIsOpenDrawerBottom(true);

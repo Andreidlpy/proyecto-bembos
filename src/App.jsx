@@ -12,32 +12,43 @@ import { Menu } from "./views/Menu/Menu";
 import { Producto } from "./views/Producto/Producto";
 import useCounter from "./hooks/useCounter";
 
-
 import { BottomNavigation } from "./components/BottomNavigationBar/BottomNavigation";
+import { DeliveryBurguer } from "./views/DeliveryBurguer/DeliveryBurguer";
+import { useDrawer } from "./hooks/useDrawer";
+import { MenuHamburguesas  } from "./views/MenuHamburguesas/MenuHamburguesas";
 
 export const App = () => {
-  const { cart, incrementar, decrementar, counter } = useCounter();
+  const {  addToCart, decrementFromCart, cart } =
+    useCounter();
+  const { isOpenCart, isOpenDrawerBottom, toggleDrawer, openDrawer } =
+    useDrawer();
 
   return (
     <>
       <ScrollTop />
-      <Header 
-        onIncrement={incrementar}
+      <Header
+        handleIncrement={addToCart}
+        handleDecrement={decrementFromCart}
         cart={cart}
-        onDecrement={decrementar}
-        counter={counter}
+        toggleDrawer={toggleDrawer}
+        openDrawer={openDrawer}
+        isOpenCart={isOpenCart}
+        isOpenDrawerBottom={isOpenDrawerBottom}
       />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/promociones" element={<Promotions />} />
         <Route
+          path="/promociones/delivery-hamburguesas"
+          element={<DeliveryBurguer />}
+        />
+        <Route
           path="/promociones/:name"
           element={
             <Producto
-              onIncrement={incrementar}
+              handleIncrement={addToCart}
+              handleDecrement={decrementFromCart}
               cart={cart}
-              onDecrement={decrementar}
-              counter={counter}
             />
           }
         />
@@ -45,10 +56,17 @@ export const App = () => {
         <Route path="/locales" element={<Locals />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="*" element={<Home />} />
+        <Route path="/menu/:name" element={<MenuHamburguesas />} />
       </Routes>
 
-      <Footer />
-      <BottomNavigation/>
+      <BottomNavigation toggleDrawer={toggleDrawer} openDrawer={openDrawer} />
+      {isOpenDrawerBottom && (
+        <div className="drawer">
+          <div className="drawer__buton">
+            <button onClick={openDrawer}>Ver carrito</button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

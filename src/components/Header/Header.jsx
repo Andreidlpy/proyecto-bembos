@@ -2,40 +2,39 @@ import "./Header.css";
 import { NavLink } from "../NavLink";
 
 import Drawer from "react-modern-drawer";
-import { useDrawer } from "../../hooks/useDrawer";
 import { Cart } from "../Cart/Cart";
+import { Link } from "react-router-dom";
 
-
-export const Header = ({onIncrement , cart, onDecrement, counter}) => {
-   const { isOpenCart , isOpenDrawerBottom ,toggleDrawer , openDrawer }=  useDrawer();
+export const Header = ({
+  handleIncrement,
+  handleDecrement,
+  cart,
+  isOpenCart,
+  isOpenDrawerBottom,
+  toggleDrawer,
+  openDrawer,
+}) => {
   return (
     <>
       <Drawer
-        open={ isOpenCart }
-        onClose={ toggleDrawer }
+        open={isOpenCart}
+        onClose={toggleDrawer}
         direction="right"
         style={{ maxWidth: "90%", width: "500px" }}
         zIndex={20}
       >
-        <Cart 
-          onIncrement={onIncrement}
+        <Cart
+          handleIncrement={handleIncrement}
+          handleDecrement={handleDecrement}
           cart={cart}
-          onDecrement={onDecrement}
-          counter={counter}
-          onToggleDrawer ={toggleDrawer} 
+          onToggleDrawer={toggleDrawer}
         />
       </Drawer>
-      
-      {isOpenDrawerBottom && (
-        <div className="drawer">
-          <div className="drawer__buton">
-            <button onClick={ openDrawer }>Ver carrito</button>
-          </div>
-        </div>
-      )}
       <header>
         <div className="header__horarios">
-          <p>Atención <br /> en Lima*</p>
+          <p>
+            Atención <br /> en Lima*
+          </p>
           <div className="line"></div>
           <p>
             Delivery: Hasta las 11 pm. <br />
@@ -74,7 +73,9 @@ export const Header = ({onIncrement , cart, onDecrement, counter}) => {
                   <NavLink to="/menu">MENÚ</NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
-                  <NavLink to="/promociones">PROMOCIONES</NavLink>
+                  <NavLink to="/promociones/delivery-hamburguesas">
+                    PROMOCIONES
+                  </NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
                   <NavLink to="/locales">LOCALES</NavLink>
@@ -85,7 +86,9 @@ export const Header = ({onIncrement , cart, onDecrement, counter}) => {
               </div>
 
               <div className="header____logo">
-                <img src="/images/Bembos_logo15.png" alt="bembos-logo-15" />
+                <Link to="/">
+                  <img src="/images/Bembos_logo15.png" alt="bembos-logo-15" />
+                </Link>
               </div>
 
               <div className="header__navbar__actions">

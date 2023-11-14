@@ -1,8 +1,10 @@
 import React from "react";
 import "./locals.css";
+import { Footer } from "../../components/Footer/Footer";
 
 export const Locals = () => {
   return (
+    <>
     <div className="locals-background page__wrapper">
       <div className="locals__content">
         <div className="locals container">
@@ -205,5 +207,8 @@ export const Locals = () => {
         </div>
       </div>
     </div>
+    
+    <Footer />
+    </>
   );
 };

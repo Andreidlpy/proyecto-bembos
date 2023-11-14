@@ -7,8 +7,7 @@ import { Banner } from "../../components/Banner/Banner";
 import { Card } from "../../components/Card/Card";
 import { menu, promociones_online } from "../../assets/promociones";
 import { images } from "../../assets/bannerImages";
-
-
+import { Footer } from "../../components/Footer/Footer";
 
 const responsive = {
   superLargeDesktop: {
@@ -29,13 +28,11 @@ const responsive = {
   },
 };
 
-
 export const Home = () => {
   return (
     <>
-      
       <main className="home page__wrapper">
-        <Banner images={ images } />
+        <Banner images={images} />
         <section className="hamburguesas">
           <div className="promociones container">
             <h2 className="promociones__heading">
@@ -60,6 +57,8 @@ export const Home = () => {
         </section>
         <SocialBox />
       </main>
+
+      <Footer />
     </>
   );
 };
