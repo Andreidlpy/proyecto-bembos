@@ -1,7 +1,10 @@
 .cart {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-
+.cart__list{
+  height: 500px;
+  overflow: auto;
+}
 .cart-heading {
   background-color: #e8e8e8;
   color: var(--color-rojo-primario);
@@ -88,6 +91,11 @@
   font-size: 13px;
 }
 
+.cart-button--available{
+  background-color: var(--color-rojo-primario);
+  border: none;
+}
+
 .cart__button-count {
   background-color: #fff;
   color: black;
@@ -113,7 +121,7 @@
   justify-content: space-between;
   margin: 10px 15px;
   padding: 10px 0;
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #ccc;
 }
 .cart-item__content{
   display: flex;
@@ -181,7 +189,34 @@
   color: var(--color-base);
   cursor: pointer;
 }
+.total__content{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 15px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc;
 
+}
+.total__subtotal{
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.total__delivery{
+  display: flex;
+  justify-content: space-between;
+}
+.total__pagar{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 15px;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
 @media ( min-width: 1024px) {
   .cart-item__nombre{
     font-size: 16px;

@@ -13,6 +13,7 @@ export const Header = ({
   isOpenDrawerBottom,
   toggleDrawer,
   openDrawer,
+  totalProductos,
 }) => {
   return (
     <>
@@ -24,6 +25,7 @@ export const Header = ({
         zIndex={20}
       >
         <Cart
+          totalProductos={totalProductos}
           handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
           cart={cart}
@@ -104,7 +106,7 @@ export const Header = ({
                   className="header__navbar__nav__ul__cart"
                   onClick={toggleDrawer}
                 >
-                  <div className="cart__number">0</div>
+                  <div className="cart__number">{cart.length}</div>
                   <img src="/images/shopping-cart.png" alt="" />
                 </button>
               </div>

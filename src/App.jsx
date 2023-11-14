@@ -1,4 +1,3 @@
-import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Home } from "./views/Home/Home";
 
@@ -10,7 +9,7 @@ import { Locals } from "./views/Locals/Locals";
 
 import { Menu } from "./views/Menu/Menu";
 import { Producto } from "./views/Producto/Producto";
-import useCounter from "./hooks/useCounter";
+import useCart from "./hooks/useCart";
 
 import { BottomNavigation } from "./components/BottomNavigationBar/BottomNavigation";
 import { DeliveryBurguer } from "./views/DeliveryBurguer/DeliveryBurguer";
@@ -18,9 +17,13 @@ import { useDrawer } from "./hooks/useDrawer";
 import { MenuHamburguesas } from "./views/MenuHamburguesas/MenuHamburguesas";
 
 export const App = () => {
+
+  const {  addToCart, decrementFromCart, cart , pendingProducts, transferToCart, totalProductos } =
+  useCart();
+
   
 
-  const { addToCart, decrementFromCart, cart } = useCounter();
+
   const { isOpenCart, isOpenDrawerBottom, toggleDrawer, openDrawer } =
     useDrawer();
 
@@ -35,6 +38,7 @@ export const App = () => {
         openDrawer={openDrawer}
         isOpenCart={isOpenCart}
         isOpenDrawerBottom={isOpenDrawerBottom}
+        totalProductos={totalProductos}
       />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -50,6 +54,8 @@ export const App = () => {
               handleIncrement={addToCart}
               handleDecrement={decrementFromCart}
               cart={cart}
+              pendingProducts={ pendingProducts }
+              transferToCart={ transferToCart }
             />
           }
         />

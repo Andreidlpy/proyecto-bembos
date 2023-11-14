@@ -21,15 +21,7 @@
   list-style: none;
   padding: 20px 0;
 }
-.tabs__grid::-webkit-scrollbar {
-  width: 1em;
-  height: 8px;
-  background-color: #ccc;
-}
-.tabs__grid::-webkit-scrollbar-thumb {
-  background-color: var(--color-base);
-  border-radius: 30px;
-}
+
 
 .tabs__grid li {
   border: 2px solid #e2e2e2;

@@ -6,7 +6,9 @@ import "./producto.css";
 export const Producto = ({
   handleIncrement,
   handleDecrement,
-  cart
+  cart,
+  pendingProducts,
+  transferToCart
 }) => {
   const location = useLocation();
   const { name } = useParams();
@@ -29,7 +31,7 @@ export const Producto = ({
 
   const promocion = promociones_online.find((prom) => prom.nombre === name);
 
-  const prodCantidad = cart.find((c) => c.id === promocion.id);
+  const productoFinded = pendingProducts.find((c) => c.id === promocion.id);
 
   
   return (
@@ -61,7 +63,7 @@ export const Producto = ({
                 -
               </button>
               <span className="details__number">
-                {prodCantidad?.cantidad && prodCantidad.cantidad || 0 }
+                {productoFinded?.cantidad && productoFinded.cantidad || 0 }
               </span>
               <button
                 onClick={() => handleIncrement(promocion)}
@@ -73,10 +75,10 @@ export const Producto = ({
             <button
               className="btn details__button--add"
               onClick={() => transferToCart()}
-              // disabled={ pendingProducts.length < 1 }
+              disabled={ pendingProducts.length < 1 }
             >
               Agregar
-              <span className="details__price">S/.30.30</span>
+              <span className="details__price">S/. { promocion.precio_actual.toFixed(2) }</span>
             </button>
           </div>
         </div>
