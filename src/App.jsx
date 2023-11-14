@@ -15,11 +15,12 @@ import useCounter from "./hooks/useCounter";
 import { BottomNavigation } from "./components/BottomNavigationBar/BottomNavigation";
 import { DeliveryBurguer } from "./views/DeliveryBurguer/DeliveryBurguer";
 import { useDrawer } from "./hooks/useDrawer";
-import { MenuHamburguesas  } from "./views/MenuHamburguesas/MenuHamburguesas";
+import { MenuHamburguesas } from "./views/MenuHamburguesas/MenuHamburguesas";
 
 export const App = () => {
-  const {  addToCart, decrementFromCart, cart } =
-    useCounter();
+  
+
+  const { addToCart, decrementFromCart, cart } = useCounter();
   const { isOpenCart, isOpenDrawerBottom, toggleDrawer, openDrawer } =
     useDrawer();
 
