@@ -42,12 +42,13 @@ button {
 button:disabled{
   background-color: #c5c6c6;
 }
-.banner__dots {
-  z-index: 2;
-}
 
 .page__wrapper {
   padding-top: 139px;
+}
+
+.react-multiple-carousel__arrow{
+  z-index: 1;
 }
 
 @media (min-width: 1024px) {
@@ -76,3 +77,4 @@ button:disabled{
   background-color: var(--color-base);
   border-radius: 30px;
 }
+

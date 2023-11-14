@@ -110,42 +110,50 @@ header {
     list-style: none;
     color: var(--color-base);
     align-items: center;
+    height: 72px;
 }
 
 .header__navbar__nav__ul__item a {
     text-decoration: none;
-    transition: all .3s, color .3s;
+    position: relative;
     font-size: 20px;
     color: var(--color-primario);
 }
 
-.header__navbar__nav__ul__item a:hover {
-    border-bottom: 1px solid var(--color-rojo-primario);
+.header__navbar__nav__ul__item a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color .3s;
 }
-.header__navbar__nav__ul__item .is-active{
-    border-bottom: 1px solid var(--color-rojo-primario);
+
+
+.header__navbar__nav__ul__item a:hover:after,
+.header__navbar__nav__ul__item .is-active:after {
+    background-color: var(--color-rojo-primario);
 }
 .header__navbar__actions__button {
     width: 65%
 }
 .header__navbar__nav__ul__order {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
     height: 100%;
-    background-color: var(--color-secundario);
+    background: #fbb905;
     border-radius: 25px;
-    padding: 7px 20px;
-    width: 100%;
-    min-width: 100%;
-    outline: 0;
     color: #373d42;
-}
-@media ( min-width: 1024px  ) {
-    .header__navbar__nav__ul__order{
-        display: flex;
-    }
+    font-size: 20px;
+    border: none;
+    outline: 0;
+    padding: 7px 20px;
+    font-weight: bold;
 }
 .header__navbar__nav__ul__order img{
     width: 30px;
@@ -167,12 +175,11 @@ header {
 .header__navbar__actions{
     padding: 12px 0;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    gap: 15px;
 }
-
 .header__navbar__nav__ul__cart {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-start;
     position: relative;
@@ -242,6 +249,13 @@ header {
     }
     .drawer{
        display: block;
+    }
+    .header__navbar__nav__ul__cart{
+        display: flex;
+    }
+    
+    .menu-nav__button{
+        display: none;
     }
 }
 

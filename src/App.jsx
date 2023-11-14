@@ -66,7 +66,7 @@ export const App = () => {
         <Route path="/menu/:name" element={<MenuHamburguesas />} />
       </Routes>
 
-      <BottomNavigation toggleDrawer={toggleDrawer} openDrawer={openDrawer} />
+      <BottomNavigation cart={cart} toggleDrawer={toggleDrawer} openDrawer={openDrawer} />
       {isOpenDrawerBottom && (
         <div className="drawer">
           <div className="drawer__buton">

@@ -4,6 +4,9 @@ import { NavLink } from "../NavLink";
 import Drawer from "react-modern-drawer";
 import { Cart } from "../Cart/Cart";
 import { Link } from "react-router-dom";
+import { Sidebar } from "../Sidebar/Sidebar";
+import { MenuNavbar } from "../MenuNavbar/MenuNavbar";
+import { useMenuNavbar } from "../../hooks/useMenuNavbar";
 
 export const Header = ({
   handleIncrement,
@@ -15,6 +18,8 @@ export const Header = ({
   openDrawer,
   totalProductos,
 }) => {
+  const { activeMenu, menu } = useMenuNavbar();
+
   return (
     <>
       <Drawer
@@ -72,18 +77,18 @@ export const Header = ({
             <ul className="header__navbar__nav__ul">
               <div className="header__navbar__list">
                 <li className="header__navbar__nav__ul__item">
-                  <NavLink to="/menu">MENÚ</NavLink>
+                  <NavLink nameActive={'is-active'} to="/menu">MENÚ</NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
-                  <NavLink to="/promociones/delivery-hamburguesas">
+                  <NavLink nameActive={'is-active'} to="/promociones/delivery-hamburguesas">
                     PROMOCIONES
                   </NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
-                  <NavLink to="/locales">LOCALES</NavLink>
+                  <NavLink nameActive={'is-active'} to="/locales">LOCALES</NavLink>
                 </li>
                 <li className="header__navbar__nav__ul__item">
-                  <NavLink to="/nosotros">NOSOTROS</NavLink>
+                  <NavLink nameActive={'is-active'} to="/nosotros">NOSOTROS</NavLink>
                 </li>
               </div>
 
@@ -109,7 +114,15 @@ export const Header = ({
                   <div className="cart__number">{cart.length}</div>
                   <img src="/images/shopping-cart.png" alt="" />
                 </button>
+                
+                <Sidebar 
+                  handleActiveMenu={activeMenu}
+                  isActiveMenu={menu} 
+                />
               </div>
+              <MenuNavbar 
+                  handleActiveMenu={activeMenu} 
+                />
             </ul>
           </nav>
         </div>

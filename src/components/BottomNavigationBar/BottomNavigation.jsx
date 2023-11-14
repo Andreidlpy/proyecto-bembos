@@ -2,7 +2,7 @@ import React from "react";
 import "./bottomnavigation.css";
 import { Link } from "react-router-dom";
 
-export const BottomNavigation = ({toggleDrawer , openDrawer}) => {
+export const BottomNavigation = ({cart, toggleDrawer , openDrawer}) => {
 
   const link = [
     { text: 'MENU' , imageLink: '/images/hamburger-icon.svg' },
@@ -30,7 +30,7 @@ export const BottomNavigation = ({toggleDrawer , openDrawer}) => {
         <li className="bottomnav__list">
           <div className="bottomnav__item" onClick={toggleDrawer}>
             <img src="/images/cart-icon.svg" alt="cart-icon" />
-            <span className="bottomnav__item__count">0</span>
+            <span className="bottomnav__item__count">{cart.length}</span>
             <p className="bottomnav__item__text">CARRITO</p>
           </div>
         </li>
