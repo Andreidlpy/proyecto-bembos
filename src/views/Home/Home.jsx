@@ -8,6 +8,7 @@ import { Card } from "../../components/Card/Card";
 import { menu, promociones_online } from "../../assets/promociones";
 import { images } from "../../assets/bannerImages";
 import { Footer } from "../../components/Footer/Footer";
+import { useProducts } from "../../hooks/useProducts";
 
 const responsive = {
   superLargeDesktop: {
@@ -29,6 +30,8 @@ const responsive = {
 };
 
 export const Home = () => {
+  const {productList} = useProducts();
+
   return (
     <>
       <main className="home page__wrapper">
@@ -39,7 +42,7 @@ export const Home = () => {
               Promociones de hamburguesas online
             </h2>
             <Carousel responsive={responsive} itemClass="carousel">
-              {promociones_online.map((promocion) => (
+              {productList.map((promocion) => (
                 <Card key={promocion.id} {...promocion} />
               ))}
             </Carousel>
