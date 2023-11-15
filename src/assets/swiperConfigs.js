@@ -22,6 +22,7 @@ import { Pagination, Grid, Navigation } from "swiper/modules";
         grid: {
           rows: 2,
           fill: "row",
+          spaceBetween: 10,
         },
       },
       768: {
@@ -30,6 +31,7 @@ import { Pagination, Grid, Navigation } from "swiper/modules";
           rows: 2,
           fill: "row",
         },
+        spaceBetween: 10,
       },
       1024: {
         slidesPerView: 2,
@@ -37,6 +39,7 @@ import { Pagination, Grid, Navigation } from "swiper/modules";
           rows: 2,
           fill: "row",
         },
+        spaceBetween: 10,
       },
     },
   };
@@ -54,12 +57,15 @@ import { Pagination, Grid, Navigation } from "swiper/modules";
     breakpoints: {
       600: {
         slidesPerView: 1,
+        spaceBetween: 10,
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 10,
       },
       1024: {
         slidesPerView: 4,
+        spaceBetween: 10,
       },
     },
   };

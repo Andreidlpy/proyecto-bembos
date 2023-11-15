@@ -11,6 +11,8 @@ import "swiper/css/pagination";
 // Import Swiper styles
 import "swiper/css";
 
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

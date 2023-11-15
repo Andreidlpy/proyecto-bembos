@@ -11,24 +11,42 @@ const fetchData = async (collectionRef) => {
   }
 };
 
-export const useProducts = () => {
+export const usePromotions = () => {
   const [productList, setProductList] = useState([]);
   const [productMenuList, setProductMenuList] = useState([]);
+
+  const [productListLoading, setProductListLoading] = useState(false);
+  const [productMenuLoading, setProductMenuLoading] = useState(false);
+
   const [loading, setLoading] = useState(false);
 
   const productsCollectionRef = collection(db, "bembos-db");
   const productsMenuCollectionRef = collection(db, "bembos-db-menu");
 
   const fetchProductList = async () => {
-    const data = await fetchData(productsCollectionRef);
-    setProductList(data);
+    try {
+      setProductListLoading(true);
+      const data = await fetchData(productsCollectionRef);
+      setProductList(data);
+    } catch (err) {
+      console.error("Error fetching products list:", err);
+    } finally {
+      setProductListLoading(false);
+    }
   };
 
   const fetchProductMenuList = async () => {
-    const data = await fetchData(productsMenuCollectionRef);
-    setProductMenuList(data);
+    try {
+      setProductMenuLoading(true);
+      const data = await fetchData(productsMenuCollectionRef);
+      setProductMenuList(data);
+    } catch (err) {
+      console.error("Error fetching products menu:", err);
+    } finally {
+      setProductMenuLoading(false);
+    }
   };
-  
+
   const getData = async () => {
     setLoading(true);
     try {
@@ -45,8 +63,8 @@ export const useProducts = () => {
       }
     } catch (err) {
       console.error("Unexpected error", err);
-    }finally {
-      setLoading(false);
+    } finally {
+      setLoading(productListLoading || productMenuLoading);
     }
   };
 
@@ -58,5 +76,7 @@ export const useProducts = () => {
     productList,
     productMenuList,
     loading,
+    productListLoading,
+    productMenuLoading,
   };
 };
