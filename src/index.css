@@ -13,7 +13,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'din1451';
+  font-family: 'din1451', Arial, Helvetica, sans-serif;
 }
 
 :root {
