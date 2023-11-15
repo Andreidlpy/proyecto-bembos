@@ -3,6 +3,7 @@
 }
 .promociones {
   padding-bottom: 20px;
+  min-height: 500px;
 }
 .promociones__heading {
   padding: 0 13px;

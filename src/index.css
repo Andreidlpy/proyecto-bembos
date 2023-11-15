@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
+@font-face {
+  font-family: 'din1451';
+  src: url('/src/fonts/DIN\ Engschrift\ Std-normal-400-100.ttf');
+}
+@font-face {
+  font-family: 'Kulturista';
+  src: url('/src/fonts/Kulturista-normal-400-100.ttf');
+}
 
 *,
 *::after,
@@ -6,6 +13,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'din1451';
 }
 
 :root {
@@ -17,10 +25,6 @@
 
 html {
   font-size: 62.5%;
-}
-
-body {
-  font-family: "Oswald", sans-serif;
 }
 
 img {
@@ -37,7 +41,6 @@ img {
 button {
   cursor: pointer;
   border: none;
-  font-family: "Oswald", sans-serif;
 }
 button:disabled{
   background-color: #c5c6c6;
