@@ -28,15 +28,16 @@
     font-weight: 600;
     margin: 15px 0;
     font-size: 18px;
+    text-transform: uppercase;
 }
 
-.locals__container__city__lima__district,
+.locals__container__city__district,
 .locals__container__city {
     display: flex;
     flex-direction: column;
 }
 
-.locals__container__city__lima__district a,
+.locals__container__city__district a,
 .locals__container__city a {
     margin: 10px 0;
 }
@@ -45,7 +46,7 @@
     width: 100%;
 }
 
-.locals__container__city__lima__district p:first-child {
+.locals__container__city__district p:first-child {
     background-color: var(--color-secundario);
     color: var(--color-base);
     border-radius: 10px;
