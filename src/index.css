@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'din1451';
-  src: url('/src/fonts/DIN-Engschrift-Std-normal-400-100.ttf');
-}
+
 @font-face {
   font-family: 'Kulturista';
   src: url('/src/fonts/Kulturista-normal-400-100.ttf');
@@ -13,7 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'din1451', Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
 }
 
 :root {

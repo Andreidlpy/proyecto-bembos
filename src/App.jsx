@@ -14,7 +14,7 @@ import useCart from "./hooks/useCart";
 import { BottomNavigation } from "./components/BottomNavigationBar/BottomNavigation";
 import { DeliveryBurguer } from "./views/DeliveryBurguer/DeliveryBurguer";
 import { useDrawer } from "./hooks/useDrawer";
-import { MenuHamburguesas } from "./views/MenuHamburguesas/MenuHamburguesas";
+import { MenuBurguer } from "./views/MenuBurguer/MenuBurguer";
 
 export const App = () => {
 
@@ -63,7 +63,7 @@ export const App = () => {
         <Route path="/locales" element={<Locals />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="*" element={<Home />} />
-        <Route path="/menu/:name" element={<MenuHamburguesas />} />
+        <Route path="/menu/:name" element={<MenuBurguer />} />
       </Routes>
 
       <BottomNavigation cart={cart} toggleDrawer={toggleDrawer} openDrawer={openDrawer} />

@@ -5,6 +5,7 @@
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 .promociones__list h2 img{
   margin-right: 8px;
@@ -12,7 +13,7 @@
 
 @media (min-width: 1024px) {
   .promociones__title{
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
   }

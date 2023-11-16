@@ -19,10 +19,10 @@ export const Card = ({
         </a>
         <div className="precio">
           {precio_actual && (
-            <span className="precio_actual">S/.{precio_actual}</span>
+            <span className="precio_actual">S/.{precio_actual.toFixed(2)}</span>
           )}
           {precio_antiguo && (
-            <span className="precio_antiguo">S/.{precio_antiguo}</span>
+            <span className="precio_antiguo">S/.{precio_antiguo.toFixed(2)}</span>
           )}
         </div>
         {menu !== "menu" ? (

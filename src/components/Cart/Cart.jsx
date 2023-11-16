@@ -41,55 +41,56 @@ export const Cart = ({
             siguiente paso
           </p>
           <div className="cart__list">
-          {cart.map((c) => (
-            <article className="cart-item" key={c.id}>
-              <div className="cart-item__content">
-                <img className="cart-item__image" src={c.img} alt={c.nombre} />
-                <div className="cart-item__info">
-                  <h2 className="cart-item__nombre">{c.nombre}</h2>
-                  <span className="cart-item__price">
-                    S/. {(c.precio_actual * c.cantidad).toFixed(2)}
-                  </span>
+            {cart.map((c) => (
+              <article className="cart-item" key={c.id}>
+                <div className="cart-item__content">
+                  <img
+                    className="cart-item__image"
+                    src={c.img}
+                    alt={c.nombre}
+                  />
+                  <div className="cart-item__info">
+                    <h2 className="cart-item__nombre">{c.nombre}</h2>
+                    <span className="cart-item__price">
+                      S/. {(c.precio_actual * c.cantidad).toFixed(2)}
+                    </span>
+                  </div>
                 </div>
+                <div className="cart-item__actions">
+                  <button
+                    onClick={() => handleDecrement(c.id, false)}
+                    className="cart-item__button"
+                  >
+                    -
+                  </button>
+                  <span className="cart-item__count">{c.cantidad}</span>
+                  <button
+                    onClick={() => handleIncrement(c, false)}
+                    className="cart-item__button"
+                  >
+                    +
+                  </button>
+                </div>
+              </article>
+            ))}
+            <div className="total__content">
+              <div className="total__subtotal">
+                <h4>Subtotal</h4>
+                <span>S/.{totalProductos()}</span>
               </div>
-              <div className="cart-item__actions">
-                <button
-                  onClick={() => handleDecrement( c.id, false )}
-                  className="cart-item__button"
-                >
-                  -
-                </button>
-                <span className="cart-item__count">{c.cantidad}</span>
-                <button
-                  onClick={() => handleIncrement( c, false )}
-                  className="cart-item__button"
-                >
-                  +
-                </button>
+              <div className="total__delivery">
+                <h4>Delivery</h4>
+                <span>S/0.00</span>
               </div>
-            </article>
-          ))}
-          </div>
-          <div className="total__content">
-            <div className="total__subtotal">
-              <h4>Subtotal</h4>
-              <span>S/.{ totalProductos() }</span>
             </div>
-            <div className="total__delivery">
-              <h4>Delivery</h4>
-              <span>S/0.00</span>
-            </div>
-          </div>
-          <div className="total__pagar">
+            <div className="total__pagar">
               <h4>Total a pagar</h4>
-              <span>S/{ totalProductos() }</span>
+              <span>S/{totalProductos()}</span>
             </div>
+          </div>
         </div>
       )}
-      <CartButtons
-        cart={cart}
-        totalProductos={totalProductos}
-      />
+      <CartButtons cart={cart} totalProductos={totalProductos} />
     </div>
   );
 };
