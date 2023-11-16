@@ -1,15 +1,9 @@
 import { db } from "../config/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { collection } from "firebase/firestore";
 import { useState, useEffect } from "react";
+import { fetchData } from "../api/getData";
 
-const fetchData = async (collectionRef) => {
-  try {
-    const data = await getDocs(collectionRef);
-    return data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-  } catch (err) {
-    throw new Error(err);
-  }
-};
+
 
 export const usePromotions = () => {
   const [productList, setProductList] = useState([]);

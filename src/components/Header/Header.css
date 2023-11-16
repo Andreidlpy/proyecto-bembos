@@ -116,7 +116,7 @@ header {
 .header__navbar__nav__ul__item a {
     text-decoration: none;
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--color-primario);
 }
 
